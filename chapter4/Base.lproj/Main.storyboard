@@ -1,25 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="chapter4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0F-um-Byr">
+                                <rect key="frame" x="116" y="269" width="88" height="30"/>
+                                <state key="normal" title="最初はグー"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijS-Nb-efc">
+                                <rect key="frame" x="30" y="486" width="62" height="30"/>
+                                <color key="backgroundColor" red="0.61176470588235299" green="0.77254901960784317" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="グー"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUj-Nt-6u3">
+                                <rect key="frame" x="131" y="486" width="45" height="30"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.59999999999999998" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="チョキ"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPh-jO-Oug">
+                                <rect key="frame" x="236" y="486" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.89411764705882357" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="パー"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paa.png" translatesAutoresizingMaskIntoConstraints="NO" id="aH1-pi-4aX">
+                                <rect key="frame" x="85" y="20" width="150" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="じゃんけん App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlx-EX-Xmy">
+                                <rect key="frame" x="16" y="299" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paa.png" translatesAutoresizingMaskIntoConstraints="NO" id="DHi-m8-jmg" userLabel="\">
+                                <rect key="frame" x="99" y="224" width="121" height="120"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aTz-0E-0Qz">
+                                <rect key="frame" x="99" y="274" width="121" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="じゃんけん App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0G-DY-Qhk">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paa.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Oh-gr-HcM">
+                                <rect key="frame" x="80" y="186" width="150" height="150"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="InN-HC-Lvj">
+                                <rect key="frame" x="78" y="255" width="121" height="21"/>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="paa.png" translatesAutoresizingMaskIntoConstraints="NO" id="96s-1E-iSh">
+                                <rect key="frame" x="85" y="98" width="150" height="150"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s0F-um-Byr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3eq-WE-HW0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tlx-EX-Xmy" secondAttribute="trailing" id="A7f-IY-DAg"/>
+                            <constraint firstItem="s0F-um-Byr" firstAttribute="top" secondItem="96s-1E-iSh" secondAttribute="bottom" constant="50" id="DH5-fQ-Zvx"/>
+                            <constraint firstItem="s0F-um-Byr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DWh-Fm-piD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s0F-um-Byr" secondAttribute="trailing" constant="100" id="Jma-lz-txs"/>
+                            <constraint firstItem="tlx-EX-Xmy" firstAttribute="top" secondItem="s0F-um-Byr" secondAttribute="bottom" id="NSE-8q-WkZ"/>
+                            <constraint firstItem="s0F-um-Byr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wfd-tb-O5J"/>
+                            <constraint firstItem="tlx-EX-Xmy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="re5-6o-rLg"/>
+                            <constraint firstItem="s0F-um-Byr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vQ0-aN-2d4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="DHi-m8-jmg"/>
+                                <exclude reference="aTz-0E-0Qz"/>
+                                <exclude reference="6Oh-gr-HcM"/>
+                                <exclude reference="InN-HC-Lvj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="DWh-Fm-piD"/>
+                                <exclude reference="Wfd-tb-O5J"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="288" y="334"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paa.png" width="120" height="120"/>
+    </resources>
 </document>
