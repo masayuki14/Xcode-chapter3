@@ -22,21 +22,26 @@
                                 <rect key="frame" x="116" y="269" width="88" height="30"/>
                                 <state key="normal" title="最初はグー"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijS-Nb-efc">
-                                <rect key="frame" x="30" y="486" width="62" height="30"/>
-                                <color key="backgroundColor" red="0.61176470588235299" green="0.77254901960784317" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="グー"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUj-Nt-6u3">
-                                <rect key="frame" x="131" y="486" width="45" height="30"/>
-                                <color key="backgroundColor" red="0.92549019607843142" green="0.59999999999999998" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="チョキ"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPh-jO-Oug">
-                                <rect key="frame" x="236" y="486" width="30" height="30"/>
-                                <color key="backgroundColor" red="0.9137254901960784" green="0.89411764705882357" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="パー"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6sT-ru-heb">
+                                <rect key="frame" x="16" y="420" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijS-Nb-efc">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                                        <color key="backgroundColor" red="0.61176470588235299" green="0.77254901960784317" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="グー"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUj-Nt-6u3">
+                                        <rect key="frame" x="96" y="0.0" width="96" height="30"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.59999999999999998" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="チョキ"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPh-jO-Oug">
+                                        <rect key="frame" x="192" y="0.0" width="96" height="30"/>
+                                        <color key="backgroundColor" red="0.9137254901960784" green="0.89411764705882357" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="パー"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paa.png" translatesAutoresizingMaskIntoConstraints="NO" id="aH1-pi-4aX">
                                 <rect key="frame" x="85" y="20" width="150" height="150"/>
                             </imageView>
@@ -74,11 +79,14 @@
                         <constraints>
                             <constraint firstItem="s0F-um-Byr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3eq-WE-HW0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tlx-EX-Xmy" secondAttribute="trailing" id="A7f-IY-DAg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6sT-ru-heb" secondAttribute="trailing" id="Bh2-TM-hgA"/>
                             <constraint firstItem="s0F-um-Byr" firstAttribute="top" secondItem="96s-1E-iSh" secondAttribute="bottom" constant="50" id="DH5-fQ-Zvx"/>
                             <constraint firstItem="s0F-um-Byr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DWh-Fm-piD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="s0F-um-Byr" secondAttribute="trailing" constant="100" id="Jma-lz-txs"/>
                             <constraint firstItem="tlx-EX-Xmy" firstAttribute="top" secondItem="s0F-um-Byr" secondAttribute="bottom" id="NSE-8q-WkZ"/>
                             <constraint firstItem="s0F-um-Byr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wfd-tb-O5J"/>
+                            <constraint firstItem="6sT-ru-heb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lgn-Ww-01S"/>
+                            <constraint firstItem="6sT-ru-heb" firstAttribute="top" secondItem="tlx-EX-Xmy" secondAttribute="bottom" constant="100" id="mTl-dJ-Ulx"/>
                             <constraint firstItem="tlx-EX-Xmy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="re5-6o-rLg"/>
                             <constraint firstItem="s0F-um-Byr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vQ0-aN-2d4"/>
                         </constraints>
