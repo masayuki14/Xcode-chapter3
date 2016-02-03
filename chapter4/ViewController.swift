@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import GameplayKit
 
 class ViewController: UIViewController {
 
+    let randomSource = GKRandomSource()
+    
     @IBOutlet weak var computerImageView: UIImageView!
-    
     @IBOutlet weak var playerImageView: UIImageView!
-    
     @IBOutlet weak var messageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,16 +36,34 @@ class ViewController: UIViewController {
     
     @IBAction func tapGoo() {
         playerImageView.image = UIImage(named: "goo.png")
+        doComputer()
     }
     
     @IBAction func tapChoki() {
         playerImageView.image = UIImage(named: "choki.png")
+        doComputer()
     }
     
     @IBAction func tapPaa() {
         playerImageView.image = UIImage(named: "paa.png")
+        doComputer()
     }
     
+    func doComputer() {
+        // computer playing method.
+        let computer = randomSource.nextIntWithUpperBound(3)
+        switch computer {
+        case 0:
+            computerImageView.image = UIImage(named: "goo.png")
+        case 1:
+            computerImageView.image = UIImage(named: "choki.png")
+        case 2:
+            computerImageView.image = UIImage(named: "paa.png")
+        default:
+            break
+        }
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
