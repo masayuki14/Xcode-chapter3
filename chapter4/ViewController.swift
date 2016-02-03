@@ -32,11 +32,23 @@ class ViewController: UIViewController {
         messageLabel.text = "じゃんけんするYO!!"
     }
     
+    @IBAction func tapGoo() {
+        playerImageView.image = UIImage(named: "goo.png")
+    }
+    
+    @IBAction func tapChoki() {
+        playerImageView.image = UIImage(named: "choki.png")
+    }
+    
+    @IBAction func tapPaa() {
+        playerImageView.image = UIImage(named: "paa.png")
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
