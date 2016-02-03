@@ -21,6 +21,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0F-um-Byr">
                                 <rect key="frame" x="123" y="350" width="75" height="30"/>
                                 <state key="normal" title="最初はグー"/>
+                                <connections>
+                                    <action selector="tapStart" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHg-cX-roF"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paa.png" translatesAutoresizingMaskIntoConstraints="NO" id="96s-1E-iSh">
                                 <rect key="frame" x="85" y="180" width="150" height="150"/>
@@ -65,17 +68,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6sT-ru-heb">
                                 <rect key="frame" x="16" y="481" width="288" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijS-Nb-efc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijS-Nb-efc">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="30"/>
                                         <color key="backgroundColor" red="0.61176470588235299" green="0.77254901960784317" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="グー"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUj-Nt-6u3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUj-Nt-6u3">
                                         <rect key="frame" x="103" y="0.0" width="82" height="30"/>
                                         <color key="backgroundColor" red="0.92549019607843142" green="0.59999999999999998" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="チョキ"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPh-jO-Oug">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPh-jO-Oug">
                                         <rect key="frame" x="205" y="0.0" width="83" height="30"/>
                                         <color key="backgroundColor" red="0.9137254901960784" green="0.89411764705882357" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="パー"/>
@@ -161,6 +164,11 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="computerImageView" destination="aH1-pi-4aX" id="YpF-Ee-Euv"/>
+                        <outlet property="messageLabel" destination="tlx-EX-Xmy" id="vLE-u2-SNU"/>
+                        <outlet property="playerImageView" destination="96s-1E-iSh" id="6XC-8h-5X7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
