@@ -36,20 +36,23 @@ class ViewController: UIViewController {
     
     @IBAction func tapGoo() {
         playerImageView.image = UIImage(named: "goo.png")
-        doComputer()
+        let com = doComputer()
+        judge(0, computer: com)
     }
     
     @IBAction func tapChoki() {
         playerImageView.image = UIImage(named: "choki.png")
-        doComputer()
+        let com = doComputer()
+        judge(1, computer: com)
     }
     
     @IBAction func tapPaa() {
         playerImageView.image = UIImage(named: "paa.png")
-        doComputer()
+        let com = doComputer()
+        judge(2, computer: com)
     }
     
-    func doComputer() {
+    func doComputer() -> Int {
         // computer playing method.
         let computer = randomSource.nextIntWithUpperBound(3)
         switch computer {
@@ -63,6 +66,19 @@ class ViewController: UIViewController {
             break
         }
         
+        return computer
+    }
+    
+    func judge(player: Int, computer: Int) {
+        if (player == computer) {
+            messageLabel.text = "あいこ。"
+        } else if (player == 0 && computer == 1
+                || player == 1 && computer == 2
+                || player == 2 && computer == 0) {
+            messageLabel.text = "勝ち!!やったNe!!"
+        } else {
+            messageLabel.text = "負け... クソが。"
+        }
     }
     
     override func didReceiveMemoryWarning() {
